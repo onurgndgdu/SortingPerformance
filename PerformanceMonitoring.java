@@ -6,6 +6,10 @@ public class PerformanceMonitoring {
         OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
 
         int[] arraySort = generateRandomArray(10000);
+
+        measureSortingTime(arraySort.clone(), "Bubble Sort", operatingSystemMXBean);
+        measureSortingTime(arraySort.clone(), "Selection Sort", operatingSystemMXBean);
+        measureSortingTime(arraySort.clone(), "Quick Sort", operatingSystemMXBean);
     }
 
     public static int[] generateRandomArray(int size) {
